@@ -118,8 +118,14 @@ class MainActivity : AppCompatActivity() {
                 holder as ChatHolder
                 holder.tvChatText.text = chatText.textMsg
                 holder.chatTextLayout.layoutDirection = when{
-                    position%2 == 0 -> View.LAYOUT_DIRECTION_RTL
-                    else -> View.LAYOUT_DIRECTION_LTR
+                    position%2 == 0 -> {
+                        holder.tvChatText.setBackgroundResource(R.color.colorMyChat)
+                        View.LAYOUT_DIRECTION_RTL
+                    }
+                    else -> {
+                        holder.tvChatText.setBackgroundResource(R.color.colorOthersChat)
+                        View.LAYOUT_DIRECTION_LTR
+                    }
                 }
             }else{
                 holder as DateHolder

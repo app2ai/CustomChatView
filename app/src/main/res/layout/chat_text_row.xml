@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="6dp"
-        android:background="@color/colorAccentDark"
-        android:textColor="@color/colorWhite"
+        android:background="@color/colorMyChat"
+        android:textColor="@color/colorChatBlack"
         android:maxWidth="280dp"
         android:text="Hello Text Right"/>
 </LinearLayout>

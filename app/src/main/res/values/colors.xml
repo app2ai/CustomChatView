@@ -5,5 +5,9 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorAccentDark">#CA3369</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorChatBlack">#000000</color>
     <color name="colorGrey">#9B9A9A</color>
+    <color name="colorMyChat">#C5FBB1</color>
+    <color name="colorOthersChat">#FFFFFF</color>
+    <color name="colorDateBg">#E1F3FC</color>
 </resources>

@@ -9,9 +9,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:id="@+id/bottomLay"
         android:layout_margin="8dp"
+        android:padding="6dp"
         android:background="@color/colorWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,15 +26,18 @@
             android:gravity="center_vertical|start"
             android:hint="Enter message"
             android:layout_weight="0.2"
+            android:layout_gravity="center"
             />
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="0.8"
             android:text="@string/send"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:onClick="messageSend"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:textColor="@color/colorWhite"
             android:background="@color/colorAccent"
             />
