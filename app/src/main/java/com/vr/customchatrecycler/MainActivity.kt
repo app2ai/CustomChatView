@@ -37,31 +37,19 @@ class MainActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@MainActivity)
             setHasFixedSize(true)
             layoutDirection = View.LAYOUT_DIRECTION_INHERIT
-            /*val ss = mutableSetOf<String>()
-            chatList.forEach {date->
-                    ss.add(date.dateOfMessage)
-            }
-            println("Date set is: $ss")*/
             listAll = getAllList()
-            println("Date set is: $listAll")
             adapter = ChatAdapter(listAll)
+            smoothScrollToPosition(listAll.size -1)
         }
     }
 
     private fun getAllList(): MutableList<Any> {
-        //listAll.addAll(chatList)
         var i = 0
         var _0th = chatList[0]
         listAll.add(_0th.dateOfMessage)
         i++
         listAll.add(_0th)
         while (i< chatList.size){
-            /*if (_0th.equals(listAll[i])){
-
-            }else{
-                _0th = listAll[i] as Chat
-                listAll.add(i, _0th.dateOfMessage)
-            }*/
             if (_0th.equals(chatList[i])){
                 listAll.add(chatList[i])
             }else{
@@ -87,11 +75,7 @@ class MainActivity : AppCompatActivity() {
             }
             textMessage.text.clear()
             rec.adapter?.notifyDataSetChanged()
-//            rec.adapter?.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
-//                override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
-//                    rec.smoothScrollToPosition(((rec.adapter?.itemCount)?:1-1)?:0)
-//                }
-//            })
+            rec.smoothScrollToPosition(listAll.size -1)
         }
     }
 
